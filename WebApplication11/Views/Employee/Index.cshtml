@@ -1,0 +1,90 @@
+﻿@model List<WebApplication11.Models.Employee>
+<h3> Student Form</h3>
+<hr />
+
+<a href="@Url.Action("Create")" class="btn btn-block">Create record</a>
+<h2> Added Employees are</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td> Campus</td>
+            <td> Code</td>
+            <td> CNIC</td>
+            <td> Date of birth</td>
+            <td> Designation</td>
+            <td> Branchname</td>
+            <td> Branchcode</td>
+            <td> Blood group</td>
+            <td> Bank name</td>
+            <td>Acc no</td>
+            <td> Address</td>
+            <td> Empname</td>
+            <td>Esi number</td>
+            <td>Email</td>
+            <td>Pan number</td>
+            <td>Passportexpirydate</td>
+            <td>Passportno</td>
+            <td>Pfnumber</td>
+            <td>Phone no</td>
+            <td>Labourexpirydate</td>
+            <td>Labourcardno</td>
+            <td>visaexpirydate </td>
+            <td>Visano</td>
+            <td> Naration</td>
+            <td> Fathername</td>
+            <td> Qualification</td>
+            <td> University</td>
+            <td> Joiningdate</td>
+            <td> Terminationdate</td>
+            <td> Salary Package</td>
+            <td> Salarytype </td>
+            <td>Gender</td>
+            <td> Grade</td>
+            <td>Action</td>
+        </tr>    
+        <tbody>
+            @foreach (var a in Model)
+            {
+            <tr>
+                <td>@a.Campus</td>
+                <td>@a.Code</td>
+                <td>@a.Cnic</td>
+
+                <td>@a.Dateofbirth</td>
+                <td>@a.Designation</td>
+                <td>@a.Branchname</td>
+                <td>@a.Branchcode</td>
+                <td>@a.Bloodgroup</td>
+                <td>@a.Bankname</td>
+                <td> @a.Accnumber</td>
+                <td>@a.Address</td>
+                <td>@a.EmpName</td>
+                <td>@a.Esinumber</td>
+                <td>@a.Email</td>
+                <td>@a.Pannumber</td>
+                <td>@a.Passportexpirydate</td>
+                <td> @a.Passportno</td>
+                <td>@a.Pfnumber</td>
+                <td>@a.Phonenumber</td>
+                <td>@a.Labourcardexpirydate</td>
+                <td>@a.Labourcardno</td>
+                <td>@a.Visaexpirydate</td>
+                <td>@a.Visano</td>
+                <td>@a.Naration</td>
+                <td>@a.FatherName</td>
+                <td> @a.Qualification</td>
+                <td>@a.University</td>
+                <td>@a.Joiningdate</td>
+                <td>@a.Terminationdate</td>
+                <td>@a.Salarypackage</td>
+                <td>@a.Salarytype</td>
+                <td>@a.Gender</td>
+                <td>@a.Grade</td>
+                <td>
+                    <a href="@Url.Action("delete",new { id=a.Id })">Delete</a><br />
+                    <a href="@Url.Action("Update",new { id=a.Id })">Update</a>
+                </td>
+            </tr>
+            }
+</table>

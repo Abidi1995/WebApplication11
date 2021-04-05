@@ -1,0 +1,455 @@
+﻿
+@model WebApplication11.Models.Employee
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <a href="@Url.Action("Index")" class="btn-block">Show Data</a>
+        <form class="form-horizontal" asp-action="Update" asp-controller="Employee" method="post" id="contact_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Update The Employee</legend>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Campus</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                            <input asp-for="Campus" placeholder="Campus" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">EmpName</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input asp-for="EmpName"  placeholder="Emp Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-code" aria-hidden="true"></i></span>
+                            <input asp-for="Code"  placeholder="Code" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Fathername</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input asp-for="FatherName"  placeholder="Fathername" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input asp-for="Email"  placeholder="E-Mail Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input asp-for="Phonenumber" placeholder="(845)555-1212" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Mobile #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-mobile" aria-hidden="true"></i></span>
+                            <input asp-for="Mobilenumber" placeholder="(0344-6453743)" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input asp-for="Address" placeholder="Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">CNIC</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input asp-for=" Cnic"  placeholder="CNIC" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+
+                 <div class="form-group">
+                        <label class="col-md-4 control-label">Blood group</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                                <select asp-for="Bloodgroup" class="form-control selectpicker">
+                                    <option value=" ">blood group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="B+">B+</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="A-">A-</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                        <label class="col-md-4 control-label">Gender</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user icon"></i></span>
+                                <select asp-for="Gender" class="form-control selectpicker">
+                                    <option value=" ">Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">branch Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input asp-for="Branchcode" placeholder="Branch Code" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label class="col-md-4 control-label">Maritalstatus</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-file" aria-hidden="true"></i></span>
+                                <select asp-for="Maritalstatus" class="form-control selectpicker">
+                                    <option value=" ">Maritalstatus</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                 <div class="form-group">
+                        <label class="col-md-4 control-label">Salary type</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                <select asp-for="Salarytype" class="form-control selectpicker">
+                                    <option value="">Salarytype</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Dailywages">Dailywages</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                 <div class="form-group">
+                        <label class="col-md-4 control-label">Salary Package</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></span>
+                                <select asp-for="Salarypackage" class="form-control selectpicker">
+                                    <option value=" ">Salarytype</option>
+                                    <option value="Monthlysalary">Monthlysalary</option>
+                                    <option value="Bonus">Bonus</option>
+                                    <option value="One">One</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Branchname</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+                            <input asp-for="Branchname"  placeholder="branch name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Bankname</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                            <input asp-for="Bankname" placeholder="bank name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Acc no</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+                            <input asp-for="Accnumber" placeholder=" Acc no #" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text area -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Designation</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+                            <input asp-for="Designation"  placeholder="designation" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> University</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+                            <input asp-for="University" placeholder="University" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Narration</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-file" aria-hidden="true"></i></span>
+                            <input asp-for="Naration" placeholder="Naration" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Grade</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-file" aria-hidden="true"></i></span>
+                            <input asp-for="Grade"  placeholder="Grade" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Esinumber</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Esinumber"  placeholder="Esinumber" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Passportno</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Passportno"  placeholder="passportno" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Pan no</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Pannumber"  placeholder="Pannumber" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Pf no</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Pfnumber" placeholder="PFnumber" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Visa no</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Visano"  placeholder="Visano" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Labour card no</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input asp-for="Labourcardno" placeholder="Labourcard no" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Qualification</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home "></i></span>
+                            <input asp-for="Qualification" placeholder="Qualification" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Branch code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-code" aria-hidden="true"></i></span>
+                            <input asp-for="Branchcode"  placeholder="Branchcode" class="form-control" type="text">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Dateof birth</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-birthday-cake"></i></span>
+                            <input asp-for="Dateofbirth" type="date" value="" placeholder=" Date of birth" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Joiningdate</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input asp-for="Joiningdate" type="date" value="" placeholder="joinigdate" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Terminationdate</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input asp-for="Terminationdate" type="date" value="" placeholder="Terminationdate" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Passportexpirydate</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input asp-for="Passportexpirydate" type="date" value="" placeholder="passportexprirydate" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Visaexpirydate</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input asp-for="Visaexpirydate" type="date" value="" placeholder="Visaexpirydate" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"> Labourcardexpirydate</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input asp-for="Labourcardexpirydate" type="date" value="" placeholder="Labourcardexpirydate" class="form-control">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning">Update <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- /.container -->
+</body>
+</html>
