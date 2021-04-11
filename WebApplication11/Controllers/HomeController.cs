@@ -1,34 +1,32 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Web.Mvc;
-using WebApplication11.Models;
+﻿//using System.Diagnostics;
+//using Microsoft.AspNetCore.Mvc;
+//using Microsoft.Extensions.Logging;
+//using System.Web.Mvc;
+//using WebApplication11.Models;
 
-namespace Crud.Controllers
-{
-    public class HomeController : Controller
-    {
-        private const object ResponseCacheLocation;
-        private readonly ILogger<HomeController> _logger;
+//namespace Crud.Controllers
+//{
+//    public class HomeController : Controller
+//    {
+  
+//        private readonly ILogger<HomeController> _logger;
 
-        public HomeController()
-        {
-        }
+//        public HomeController(HomeController logger)
+//        {
+            
+//        }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+//        public System.Web.Mvc.ActionResult Index()
+//        {
+//            return View();
+//        }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+//        public System.Web.Mvc.ActionResult Privacy()
+//        {
+//            return View();
+//        }
 
-        [ResponseCache(Duration = 0, IViewLocationCache = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
-}
+//        [ResponseCache(Duration = 0, ViewLocationCache = ResponseCacheLocation.None, NoStore = true)]
+//        public System.Web.Mvc.ActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+//    }
+//}
